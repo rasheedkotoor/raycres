@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Careers — RayCres Technologies</title>
+  <meta name="description" content="Open roles at RayCres Technologies. Build the future with us." />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+        colors: {
+          'brand-blue': { 50: '#EAF1FF', 600: '#1E4FD8', 900: '#0B2A4A' },
+          'brand-green': { 50: '#ECFDF5', 600: '#10B981' }
+        }
+      } }
+    };
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="bg-white text-slate-800 antialiased">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center" aria-label="RayCres Technologies home">
+        <img src="assets/img/logo-primary.svg" alt="RayCres Technologies" width="180" height="40" class="logo-full h-9 w-auto" />
+        <img src="assets/img/logo-icon.svg" alt="RayCres" width="40" height="40" class="logo-compact h-9 w-9" />
+      </a>
+      <nav class="hidden md:flex items-center gap-8" aria-label="Primary">
+        <a href="index.html" data-nav="index.html" class="text-slate-700 hover:text-brand-blue-600 transition">Home</a>
+        <a href="about.html" data-nav="about.html" class="text-slate-700 hover:text-brand-blue-600 transition">About</a>
+        <a href="index.html#services" class="text-slate-700 hover:text-brand-blue-600 transition">Services</a>
+        <a href="careers.html" data-nav="careers.html" class="text-slate-700 hover:text-brand-blue-600 transition">Careers</a>
+        <a href="contact.html" data-nav="contact.html" class="text-slate-700 hover:text-brand-blue-600 transition">Contact</a>
+      </nav>
+      <a href="contact.html" class="hidden md:inline-flex items-center gap-2 bg-brand-blue-600 hover:bg-brand-blue-900 text-white font-semibold px-5 py-2.5 rounded-xl transition shadow-sm">Get a Quote</a>
+      <button id="navToggle" class="hamburger md:hidden text-brand-blue-900 p-2" aria-label="Toggle navigation" aria-controls="mobileNav" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div id="mobileNav" class="md:hidden border-t border-slate-200 bg-white">
+      <nav class="px-4 py-4 flex flex-col gap-3" aria-label="Mobile">
+        <a href="index.html" class="py-2 text-slate-800">Home</a>
+        <a href="about.html" class="py-2 text-slate-800">About</a>
+        <a href="index.html#services" class="py-2 text-slate-800">Services</a>
+        <a href="careers.html" class="py-2 text-slate-800">Careers</a>
+        <a href="contact.html" class="py-2 text-slate-800">Contact</a>
+        <a href="contact.html" class="mt-2 bg-brand-blue-600 text-white text-center font-semibold px-5 py-3 rounded-xl">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero-gradient text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 text-center">
+        <span class="inline-block bg-white/10 border border-white/20 text-sm px-3 py-1 rounded-full mb-4 reveal">We're hiring</span>
+        <h1 class="reveal text-4xl md:text-5xl font-extrabold leading-tight">Build the future with us.</h1>
+        <p class="reveal mt-5 text-lg text-blue-100/90 max-w-2xl mx-auto">
+          Join a team that values craft, curiosity, and clear thinking. Remote-friendly, async-first, outcome-driven.
+        </p>
+        <a href="#apply" class="reveal mt-8 inline-flex items-center gap-2 bg-brand-green-600 hover:bg-emerald-500 text-white font-semibold px-6 py-3 rounded-xl shadow-lg transition">Apply now</a>
+      </div>
+    </section>
+
+    <!-- OPEN POSITIONS -->
+    <section class="py-16 md:py-24">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="reveal mb-10">
+          <span class="text-brand-green-600 font-semibold uppercase tracking-wider text-sm">Open positions</span>
+          <h2 class="mt-3 text-3xl md:text-4xl font-bold text-brand-blue-900">Current openings</h2>
+        </div>
+
+        <div class="space-y-4">
+
+          <!-- Job 1 -->
+          <article class="reveal border border-slate-200 rounded-2xl overflow-hidden">
+            <button data-collapse-trigger class="w-full flex items-center justify-between gap-4 p-5 text-left hover:bg-slate-50 transition" aria-expanded="false">
+              <div>
+                <h3 class="text-lg font-semibold text-brand-blue-900">Senior Full-Stack Engineer</h3>
+                <p class="text-sm text-slate-600 mt-1">Remote · Full-time · Engineering</p>
+              </div>
+              <span data-collapse-icon class="text-brand-blue-600 transition-transform">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </span>
+            </button>
+            <div class="hidden p-5 border-t border-slate-200 bg-slate-50">
+              <p class="text-slate-700">Lead end-to-end development of customer-facing products using TypeScript, React, Node.js, and PostgreSQL. 5+ years experience preferred.</p>
+            </div>
+          </article>
+
+          <!-- Job 2 -->
+          <article class="reveal border border-slate-200 rounded-2xl overflow-hidden">
+            <button data-collapse-trigger class="w-full flex items-center justify-between gap-4 p-5 text-left hover:bg-slate-50 transition" aria-expanded="false">
+              <div>
+                <h3 class="text-lg font-semibold text-brand-blue-900">AI / ML Engineer</h3>
+                <p class="text-sm text-slate-600 mt-1">Hybrid · Bengaluru · Full-time · AI</p>
+              </div>
+              <span data-collapse-icon class="text-brand-blue-600 transition-transform">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </span>
+            </button>
+            <div class="hidden p-5 border-t border-slate-200 bg-slate-50">
+              <p class="text-slate-700">Design and ship LLM-powered features and ML pipelines in production. Experience with PyTorch, RAG architectures, and MLOps required.</p>
+            </div>
+          </article>
+
+          <!-- Job 3 -->
+          <article class="reveal border border-slate-200 rounded-2xl overflow-hidden">
+            <button data-collapse-trigger class="w-full flex items-center justify-between gap-4 p-5 text-left hover:bg-slate-50 transition" aria-expanded="false">
+              <div>
+                <h3 class="text-lg font-semibold text-brand-blue-900">DevOps Engineer</h3>
+                <p class="text-sm text-slate-600 mt-1">Remote · Full-time · Infrastructure</p>
+              </div>
+              <span data-collapse-icon class="text-brand-blue-600 transition-transform">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </span>
+            </button>
+            <div class="hidden p-5 border-t border-slate-200 bg-slate-50">
+              <p class="text-slate-700">Own CI/CD, IaC (Terraform), Kubernetes, and observability for client production systems. AWS/GCP expertise required.</p>
+            </div>
+          </article>
+
+          <!-- Job 4 -->
+          <article class="reveal border border-slate-200 rounded-2xl overflow-hidden">
+            <button data-collapse-trigger class="w-full flex items-center justify-between gap-4 p-5 text-left hover:bg-slate-50 transition" aria-expanded="false">
+              <div>
+                <h3 class="text-lg font-semibold text-brand-blue-900">UI/UX Designer</h3>
+                <p class="text-sm text-slate-600 mt-1">Remote · Full-time · Design</p>
+              </div>
+              <span data-collapse-icon class="text-brand-blue-600 transition-transform">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </span>
+            </button>
+            <div class="hidden p-5 border-t border-slate-200 bg-slate-50">
+              <p class="text-slate-700">Craft cohesive product experiences and scalable design systems. Figma mastery, research literacy, and strong portfolio required.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- APPLICATION FORM -->
+    <section id="apply" class="py-16 md:py-24 bg-slate-50 scroll-mt-20">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center mb-10">
+          <span class="text-brand-green-600 font-semibold uppercase tracking-wider text-sm">Application</span>
+          <h2 class="mt-3 text-3xl md:text-4xl font-bold text-brand-blue-900">Apply for a role</h2>
+          <p class="mt-3 text-slate-600">Fill out the form below — we'll be in touch within one business day.</p>
+        </div>
+
+        <form id="careersForm" data-mailto="careers@raycres.com" data-subject="Job Application — RayCres Careers" class="reveal bg-white rounded-2xl border border-slate-200 p-6 md:p-8 space-y-5" novalidate>
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div class="field">
+              <label for="c-name" class="block text-sm font-medium text-slate-700 mb-1">Full name *</label>
+              <input id="c-name" name="name" data-label="Full name" type="text" required class="w-full rounded-lg border border-slate-300 px-3 py-2.5 focus:border-brand-blue-600 focus:outline-none" />
+              <p class="field-error text-sm text-red-600 mt-1"></p>
+            </div>
+            <div class="field">
+              <label for="c-email" class="block text-sm font-medium text-slate-700 mb-1">Email *</label>
+              <input id="c-email" name="email" data-label="Email" type="email" required class="w-full rounded-lg border border-slate-300 px-3 py-2.5 focus:border-brand-blue-600 focus:outline-none" />
+              <p class="field-error text-sm text-red-600 mt-1"></p>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div class="field">
+              <label for="c-phone" class="block text-sm font-medium text-slate-700 mb-1">Phone *</label>
+              <input id="c-phone" name="phone" data-label="Phone" type="tel" required class="w-full rounded-lg border border-slate-300 px-3 py-2.5 focus:border-brand-blue-600 focus:outline-none" />
+              <p class="field-error text-sm text-red-600 mt-1"></p>
+            </div>
+            <div class="field">
+              <label for="c-position" class="block text-sm font-medium text-slate-700 mb-1">Position *</label>
+              <select id="c-position" name="position" data-label="Position" required class="w-full rounded-lg border border-slate-300 px-3 py-2.5 bg-white focus:border-brand-blue-600 focus:outline-none">
+                <option value="">Select a role…</option>
+                <option>Senior Full-Stack Engineer</option>
+                <option>AI / ML Engineer</option>
+                <option>DevOps Engineer</option>
+                <option>UI/UX Designer</option>
+                <option>Other</option>
+              </select>
+              <p class="field-error text-sm text-red-600 mt-1"></p>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div class="field">
+              <label for="c-exp" class="block text-sm font-medium text-slate-700 mb-1">Years of experience *</label>
+              <input id="c-exp" name="experience" data-label="Years of experience" type="number" min="0" max="50" required class="w-full rounded-lg border border-slate-300 px-3 py-2.5 focus:border-brand-blue-600 focus:outline-none" />
+              <p class="field-error text-sm text-red-600 mt-1"></p>
+            </div>
+            <div class="field">
+              <label for="c-portfolio" class="block text-sm font-medium text-slate-700 mb-1">LinkedIn / Portfolio URL</label>
+              <input id="c-portfolio" name="portfolio" data-label="Portfolio" type="url" placeholder="https://" class="w-full rounded-lg border border-slate-300 px-3 py-2.5 focus:border-brand-blue-600 focus:outline-none" />
+              <p class="field-error text-sm text-red-600 mt-1"></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="c-resume" class="block text-sm font-medium text-slate-700 mb-1">Resume link (URL) *</label>
+            <input id="c-resume" name="resume" data-label="Resume" type="url" required placeholder="https://" class="w-full rounded-lg border border-slate-300 px-3 py-2.5 focus:border-brand-blue-600 focus:outline-none" />
+            <p class="field-error text-sm text-red-600 mt-1"></p>
+          </div>
+
+          <div class="field">
+            <label for="c-msg" class="block text-sm font-medium text-slate-700 mb-1">Cover message *</label>
+            <textarea id="c-msg" name="message" data-label="Cover message" rows="5" required class="w-full rounded-lg border border-slate-300 px-3 py-2.5 focus:border-brand-blue-600 focus:outline-none"></textarea>
+            <p class="field-error text-sm text-red-600 mt-1"></p>
+          </div>
+
+          <button type="submit" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-brand-blue-600 hover:bg-brand-blue-900 text-white font-semibold px-6 py-3 rounded-xl shadow-sm transition">
+            Submit application
+          </button>
+          <p class="text-xs text-slate-500">By submitting, you'll be redirected to your email client to send the application.</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-blue-900 text-blue-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid md:grid-cols-4 gap-10">
+      <div>
+        <img src="assets/img/logo-secondary.svg" alt="RayCres Technologies" width="180" height="40" class="h-9 w-auto mb-4" />
+        <p class="text-sm text-blue-100/80">Engineering tomorrow's digital edge — AI, web, mobile, and cloud, delivered with craft.</p>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-4">Company</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="index.html" class="hover:text-white">Home</a></li>
+          <li><a href="about.html" class="hover:text-white">About</a></li>
+          <li><a href="careers.html" class="hover:text-white">Careers</a></li>
+          <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-4">Services</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="index.html#services" class="hover:text-white">AI Solutions</a></li>
+          <li><a href="index.html#services" class="hover:text-white">Web Development</a></li>
+          <li><a href="index.html#services" class="hover:text-white">Mobile Development</a></li>
+          <li><a href="index.html#services" class="hover:text-white">DevOps Support</a></li>
+          <li><a href="index.html#services" class="hover:text-white">UI/UX Design</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-4">Get in touch</h4>
+        <ul class="space-y-2 text-sm">
+          <li>Email: <a href="mailto:hello@raycres.com" class="hover:text-white">hello@raycres.com</a></li>
+          <li>Phone: <a href="tel:+910000000000" class="hover:text-white">+91 00000 00000</a></li>
+          <li>Bengaluru, India</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 text-sm text-blue-100/70 flex flex-col md:flex-row justify-between gap-2">
+        <p>&copy; <span data-year>2026</span> RayCres Technologies Pvt Ltd. All rights reserved.</p>
+        <p>Crafted with care.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

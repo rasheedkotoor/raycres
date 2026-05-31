@@ -1,0 +1,85 @@
+/* RayCres Technologies — custom styles (tokens, animations, fine-grain) */
+
+:root {
+  --brand-blue-900: #0B2A4A;
+  --brand-blue-600: #1E4FD8;
+  --brand-blue-50:  #EAF1FF;
+  --brand-green-600: #10B981;
+  --brand-green-50:  #ECFDF5;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, sans-serif; }
+
+/* Hero gradient mesh */
+.hero-gradient {
+  background:
+    radial-gradient(60% 80% at 85% 20%, rgba(16, 185, 129, 0.35), transparent 60%),
+    radial-gradient(50% 70% at 15% 80%, rgba(30, 79, 216, 0.45), transparent 60%),
+    linear-gradient(135deg, var(--brand-blue-900) 0%, #102E5C 55%, var(--brand-blue-600) 100%);
+}
+
+/* Scroll-reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s ease, transform .7s ease;
+  will-change: opacity, transform;
+}
+.reveal.is-visible { opacity: 1; transform: none; }
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid var(--brand-blue-600);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Mobile nav panel */
+#mobileNav { max-height: 0; overflow: hidden; transition: max-height .35s ease; }
+#mobileNav.open { max-height: 480px; }
+
+/* Hamburger icon */
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: currentColor;
+  margin: 5px 0;
+  transition: transform .3s ease, opacity .3s ease;
+}
+.hamburger.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.is-open span:nth-child(2) { opacity: 0; }
+.hamburger.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Toast */
+#toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(120%);
+  background: var(--brand-blue-900);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+  transition: transform .4s ease;
+  z-index: 100;
+  font-weight: 500;
+}
+#toast.show { transform: translateX(-50%) translateY(0); }
+
+/* Responsive logo swap: show icon-only on very small screens */
+.logo-full { display: inline-block; }
+.logo-compact { display: none; }
+@media (max-width: 380px) {
+  .logo-full { display: none; }
+  .logo-compact { display: inline-block; }
+}
+
+/* Honor reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  * { animation: none !important; transition: none !important; }
+}

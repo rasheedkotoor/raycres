@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RayCres Technologies — Engineering Tomorrow's Digital Edge</title>
+  <meta name="description" content="RayCres Technologies Pvt Ltd delivers AI, Web, Mobile, DevOps, SEO, and UI/UX solutions that scale modern businesses." />
+  <meta property="og:title" content="RayCres Technologies" />
+  <meta property="og:description" content="AI, Web, Mobile, DevOps, SEO, and UI/UX engineering for modern businesses." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          colors: {
+            'brand-blue': { 50: '#EAF1FF', 600: '#1E4FD8', 900: '#0B2A4A' },
+            'brand-green': { 50: '#ECFDF5', 600: '#10B981' }
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="bg-white text-slate-800 antialiased">
+
+  <!-- ============================= HEADER ============================= -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center" aria-label="RayCres Technologies home">
+        <img src="assets/img/logo-primary.svg" alt="RayCres Technologies" width="180" height="40" class="logo-full h-9 w-auto" />
+        <img src="assets/img/logo-icon.svg" alt="RayCres" width="40" height="40" class="logo-compact h-9 w-9" />
+      </a>
+      <nav class="hidden md:flex items-center gap-8" aria-label="Primary">
+        <a href="index.html" data-nav="index.html" class="text-slate-700 hover:text-brand-blue-600 transition">Home</a>
+        <a href="about.html" data-nav="about.html" class="text-slate-700 hover:text-brand-blue-600 transition">About</a>
+        <a href="index.html#services" class="text-slate-700 hover:text-brand-blue-600 transition">Services</a>
+        <a href="careers.html" data-nav="careers.html" class="text-slate-700 hover:text-brand-blue-600 transition">Careers</a>
+        <a href="contact.html" data-nav="contact.html" class="text-slate-700 hover:text-brand-blue-600 transition">Contact</a>
+      </nav>
+      <a href="contact.html" class="hidden md:inline-flex items-center gap-2 bg-brand-blue-600 hover:bg-brand-blue-900 text-white font-semibold px-5 py-2.5 rounded-xl transition shadow-sm">
+        Get a Quote
+      </a>
+      <button id="navToggle" class="hamburger md:hidden text-brand-blue-900 p-2" aria-label="Toggle navigation" aria-controls="mobileNav" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div id="mobileNav" class="md:hidden border-t border-slate-200 bg-white">
+      <nav class="px-4 py-4 flex flex-col gap-3" aria-label="Mobile">
+        <a href="index.html" class="py-2 text-slate-800">Home</a>
+        <a href="about.html" class="py-2 text-slate-800">About</a>
+        <a href="index.html#services" class="py-2 text-slate-800">Services</a>
+        <a href="careers.html" class="py-2 text-slate-800">Careers</a>
+        <a href="contact.html" class="py-2 text-slate-800">Contact</a>
+        <a href="contact.html" class="mt-2 bg-brand-blue-600 text-white text-center font-semibold px-5 py-3 rounded-xl">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================= HERO ============================= -->
+    <section class="hero-gradient text-white relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 grid md:grid-cols-2 gap-12 items-center">
+        <div class="reveal">
+          <span class="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white text-sm px-3 py-1 rounded-full mb-5">
+            <span class="w-2 h-2 rounded-full bg-brand-green-600"></span> Engineering excellence since day one
+          </span>
+          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
+            Engineering Tomorrow's <span class="text-brand-green-600">Digital Edge</span>
+          </h1>
+          <p class="mt-6 text-lg md:text-xl text-blue-100/90 max-w-xl">
+            RayCres Technologies builds AI-powered platforms, modern web & mobile experiences, and resilient cloud infrastructure for ambitious teams worldwide.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="#services" class="inline-flex items-center gap-2 bg-brand-green-600 hover:bg-emerald-500 text-white font-semibold px-6 py-3 rounded-xl shadow-lg transition">
+              Explore Services
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+            <a href="contact.html" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-6 py-3 rounded-xl transition">
+              Contact Us
+            </a>
+          </div>
+        </div>
+        <!-- Hero illustration -->
+        <div class="reveal hidden md:block" aria-hidden="true">
+          <svg viewBox="0 0 500 400" class="w-full h-auto drop-shadow-2xl">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0%" stop-color="#10B981" stop-opacity=".9"/>
+                <stop offset="100%" stop-color="#1E4FD8" stop-opacity=".9"/>
+              </linearGradient>
+            </defs>
+            <circle cx="380" cy="120" r="80" fill="url(#g1)" opacity="0.35"/>
+            <rect x="60" y="80" width="320" height="220" rx="20" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.25)"/>
+            <rect x="80" y="110" width="120" height="14" rx="4" fill="rgba(255,255,255,0.5)"/>
+            <rect x="80" y="135" width="200" height="10" rx="3" fill="rgba(255,255,255,0.3)"/>
+            <rect x="80" y="155" width="160" height="10" rx="3" fill="rgba(255,255,255,0.3)"/>
+            <rect x="80" y="195" width="80" height="60" rx="10" fill="#10B981" opacity=".85"/>
+            <rect x="170" y="195" width="80" height="60" rx="10" fill="#1E4FD8" opacity=".9"/>
+            <rect x="260" y="195" width="80" height="60" rx="10" fill="rgba(255,255,255,0.25)"/>
+            <circle cx="100" cy="225" r="12" fill="#fff" opacity=".9"/>
+            <circle cx="190" cy="225" r="12" fill="#fff" opacity=".9"/>
+            <path d="M40 340 Q150 280 260 340 T480 340" stroke="#10B981" stroke-width="3" fill="none" opacity=".7"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= TODO: STATS / INTRO ============================= -->
+    <!-- <section class="py-16 md:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-3 gap-6 mb-16">
+          <div class="reveal text-center p-8 rounded-2xl bg-brand-blue-50 border border-blue-100">
+            <div class="text-4xl font-extrabold text-brand-blue-900">150+</div>
+            <div class="text-slate-600 mt-2">Projects delivered</div>
+          </div>
+          <div class="reveal text-center p-8 rounded-2xl bg-brand-green-50 border border-emerald-100">
+            <div class="text-4xl font-extrabold text-brand-blue-900">60+</div>
+            <div class="text-slate-600 mt-2">Happy clients</div>
+          </div>
+          <div class="reveal text-center p-8 rounded-2xl bg-brand-blue-50 border border-blue-100">
+            <div class="text-4xl font-extrabold text-brand-blue-900">12</div>
+            <div class="text-slate-600 mt-2">Countries served</div>
+          </div>
+        </div>
+        <div class="reveal max-w-3xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-brand-blue-900">Your engineering partner for digital growth</h2>
+          <p class="mt-5 text-lg text-slate-600">
+            We pair strategic product thinking with deep technical craft — turning ideas into reliable, beautifully engineered software that compounds value for your business.
+          </p>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- ============================= SERVICES ============================= -->
+    <section id="services" class="py-16 md:py-24 bg-slate-50 scroll-mt-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center max-w-2xl mx-auto mb-14">
+          <span class="text-brand-green-600 font-semibold uppercase tracking-wider text-sm">What we do</span>
+          <h2 class="mt-3 text-3xl md:text-4xl font-bold text-brand-blue-900">Services built to ship and scale</h2>
+          <p class="mt-4 text-slate-600">End-to-end product engineering across six high-impact disciplines.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <!-- AI Solutions -->
+          <article class="reveal group bg-white rounded-2xl p-7 border border-slate-200 hover:border-brand-blue-600 hover:shadow-xl transition">
+            <div class="w-12 h-12 rounded-xl bg-brand-green-50 text-brand-green-600 flex items-center justify-center mb-5">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a4 4 0 0 0-4 4v1a4 4 0 0 0-2 7 4 4 0 0 0 2 7v1a4 4 0 0 0 8 0v-1a4 4 0 0 0 2-7 4 4 0 0 0-2-7V6a4 4 0 0 0-4-4z"/><path d="M9 12h6M12 9v6"/></svg>
+            </div>
+            <h3 class="text-xl font-semibold text-brand-blue-900">AI Solutions</h3>
+            <p class="mt-2 text-slate-600">Custom LLM apps, ML pipelines, and intelligent automation tailored to your domain.</p>
+            <a href="contact.html" class="mt-5 inline-flex items-center gap-1 text-brand-blue-600 font-semibold group-hover:gap-2 transition-all">Learn more →</a>
+          </article>
+
+          <!-- Web Development -->
+          <article class="reveal group bg-white rounded-2xl p-7 border border-slate-200 hover:border-brand-blue-600 hover:shadow-xl transition">
+            <div class="w-12 h-12 rounded-xl bg-brand-green-50 text-brand-green-600 flex items-center justify-center mb-5">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 14h.01M12 14h.01"/></svg>
+            </div>
+            <h3 class="text-xl font-semibold text-brand-blue-900">Web Development</h3>
+            <p class="mt-2 text-slate-600">Modern, fast, accessible web platforms — from marketing sites to enterprise SaaS.</p>
+            <a href="contact.html" class="mt-5 inline-flex items-center gap-1 text-brand-blue-600 font-semibold group-hover:gap-2 transition-all">Learn more →</a>
+          </article>
+
+          <!-- Mobile Development -->
+          <article class="reveal group bg-white rounded-2xl p-7 border border-slate-200 hover:border-brand-blue-600 hover:shadow-xl transition">
+            <div class="w-12 h-12 rounded-xl bg-brand-green-50 text-brand-green-600 flex items-center justify-center mb-5">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+            </div>
+            <h3 class="text-xl font-semibold text-brand-blue-900">Mobile Development</h3>
+            <p class="mt-2 text-slate-600">Native iOS / Android and cross-platform apps engineered for performance and delight.</p>
+            <a href="contact.html" class="mt-5 inline-flex items-center gap-1 text-brand-blue-600 font-semibold group-hover:gap-2 transition-all">Learn more →</a>
+          </article>
+
+          <!-- SEO Marketing -->
+          <article class="reveal group bg-white rounded-2xl p-7 border border-slate-200 hover:border-brand-blue-600 hover:shadow-xl transition">
+            <div class="w-12 h-12 rounded-xl bg-brand-green-50 text-brand-green-600 flex items-center justify-center mb-5">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/><path d="M11 8v6M8 11h6"/></svg>
+            </div>
+            <h3 class="text-xl font-semibold text-brand-blue-900">SEO Marketing</h3>
+            <p class="mt-2 text-slate-600">Technical SEO, content strategy, and analytics that drive organic growth that lasts.</p>
+            <a href="contact.html" class="mt-5 inline-flex items-center gap-1 text-brand-blue-600 font-semibold group-hover:gap-2 transition-all">Learn more →</a>
+          </article>
+
+          <!-- DevOps Support -->
+          <article class="reveal group bg-white rounded-2xl p-7 border border-slate-200 hover:border-brand-blue-600 hover:shadow-xl transition">
+            <div class="w-12 h-12 rounded-xl bg-brand-green-50 text-brand-green-600 flex items-center justify-center mb-5">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h3 class="text-xl font-semibold text-brand-blue-900">DevOps Support</h3>
+            <p class="mt-2 text-slate-600">CI/CD, observability, IaC, and 24×7 SRE support keeping your systems fast and reliable.</p>
+            <a href="contact.html" class="mt-5 inline-flex items-center gap-1 text-brand-blue-600 font-semibold group-hover:gap-2 transition-all">Learn more →</a>
+          </article>
+
+          <!-- UI/UX Design -->
+          <article class="reveal group bg-white rounded-2xl p-7 border border-slate-200 hover:border-brand-blue-600 hover:shadow-xl transition">
+            <div class="w-12 h-12 rounded-xl bg-brand-green-50 text-brand-green-600 flex items-center justify-center mb-5">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+            </div>
+            <h3 class="text-xl font-semibold text-brand-blue-900">UI/UX Design</h3>
+            <p class="mt-2 text-slate-600">Research-led product design and design systems that turn complexity into clarity.</p>
+            <a href="contact.html" class="mt-5 inline-flex items-center gap-1 text-brand-blue-600 font-semibold group-hover:gap-2 transition-all">Learn more →</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= PROCESS ============================= -->
+    <section class="py-16 md:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center max-w-2xl mx-auto mb-14">
+          <span class="text-brand-green-600 font-semibold uppercase tracking-wider text-sm">How we work</span>
+          <h2 class="mt-3 text-3xl md:text-4xl font-bold text-brand-blue-900">A proven 4-step delivery model</h2>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="reveal p-6 rounded-2xl border border-slate-200">
+            <div class="w-10 h-10 rounded-full bg-brand-blue-600 text-white font-bold flex items-center justify-center">1</div>
+            <h3 class="mt-4 text-lg font-semibold text-brand-blue-900">Discover</h3>
+            <p class="mt-2 text-slate-600 text-sm">Workshops, research, and product strategy aligned to outcomes.</p>
+          </div>
+          <div class="reveal p-6 rounded-2xl border border-slate-200">
+            <div class="w-10 h-10 rounded-full bg-brand-blue-600 text-white font-bold flex items-center justify-center">2</div>
+            <h3 class="mt-4 text-lg font-semibold text-brand-blue-900">Design</h3>
+            <p class="mt-2 text-slate-600 text-sm">Information architecture, prototypes, and a tested design system.</p>
+          </div>
+          <div class="reveal p-6 rounded-2xl border border-slate-200">
+            <div class="w-10 h-10 rounded-full bg-brand-blue-600 text-white font-bold flex items-center justify-center">3</div>
+            <h3 class="mt-4 text-lg font-semibold text-brand-blue-900">Build</h3>
+            <p class="mt-2 text-slate-600 text-sm">Agile delivery with weekly demos and rigorous quality engineering.</p>
+          </div>
+          <div class="reveal p-6 rounded-2xl border border-slate-200">
+            <div class="w-10 h-10 rounded-full bg-brand-blue-600 text-white font-bold flex items-center justify-center">4</div>
+            <h3 class="mt-4 text-lg font-semibold text-brand-blue-900">Scale</h3>
+            <p class="mt-2 text-slate-600 text-sm">Observability, optimization, and continuous improvement post-launch.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= CTA BANNER ============================= -->
+    <section class="py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="reveal rounded-3xl bg-gradient-to-r from-brand-green-600 to-brand-blue-600 text-white p-10 md:p-14 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <h2 class="text-2xl md:text-3xl font-bold">Ready to build something exceptional?</h2>
+            <p class="mt-2 text-white/90">Join our team or talk to our engineers — we reply within one business day.</p>
+          </div>
+          <div class="flex gap-3 flex-wrap">
+            <a href="careers.html" class="bg-white text-brand-blue-900 font-semibold px-6 py-3 rounded-xl hover:bg-slate-100 transition">Open Roles</a>
+            <a href="contact.html" class="bg-brand-blue-900 text-white font-semibold px-6 py-3 rounded-xl hover:bg-black/40 transition">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================= FOOTER ============================= -->
+  <footer class="bg-brand-blue-900 text-blue-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid md:grid-cols-4 gap-10">
+      <div>
+        <img src="assets/img/logo-secondary.svg" alt="RayCres Technologies" width="180" height="40" class="h-9 w-auto mb-4" />
+        <p class="text-sm text-blue-100/80">Engineering tomorrow's digital edge — AI, web, mobile, and cloud, delivered with craft.</p>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-4">Company</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="index.html" class="hover:text-white">Home</a></li>
+          <li><a href="about.html" class="hover:text-white">About</a></li>
+          <li><a href="careers.html" class="hover:text-white">Careers</a></li>
+          <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-4">Services</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="index.html#services" class="hover:text-white">AI Solutions</a></li>
+          <li><a href="index.html#services" class="hover:text-white">Web Development</a></li>
+          <li><a href="index.html#services" class="hover:text-white">Mobile Development</a></li>
+          <li><a href="index.html#services" class="hover:text-white">DevOps Support</a></li>
+          <li><a href="index.html#services" class="hover:text-white">UI/UX Design</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-4">Get in touch</h4>
+        <ul class="space-y-2 text-sm">
+          <li>Email: <a href="mailto:hello@raycres.com" class="hover:text-white">hello@raycres.com</a></li>
+          <li>Phone: <a href="tel:+910000000000" class="hover:text-white">+91 00000 00000</a></li>
+          <li>Bengaluru, India</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 text-sm text-blue-100/70 flex flex-col md:flex-row justify-between gap-2">
+        <p>&copy; <span data-year>2026</span> RayCres Technologies Pvt Ltd. All rights reserved.</p>
+        <p>Crafted with care.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

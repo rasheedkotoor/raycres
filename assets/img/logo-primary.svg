@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- RayCres Technologies — Primary logo (light backgrounds). 180x40 mock placeholder. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 40" width="180" height="40" role="img" aria-label="RayCres Technologies">
+  <title>RayCres Technologies</title>
+  <!-- Icon mark -->
+  <g>
+    <rect x="2" y="4" width="32" height="32" rx="8" fill="#1E4FD8"/>
+    <path d="M10 28 L18 12 L26 28 Z" fill="#10B981"/>
+    <circle cx="18" cy="22" r="3" fill="#FFFFFF"/>
+  </g>
+  <!-- Wordmark -->
+  <g fill="#0B2A4A" font-family="Inter, Segoe UI, Arial, sans-serif">
+    <text x="42" y="22" font-size="15" font-weight="700" letter-spacing="0.3">RayCres</text>
+    <text x="42" y="34" font-size="8" font-weight="500" fill="#10B981" letter-spacing="1.4">TECHNOLOGIES</text>
+  </g>
+</svg>
