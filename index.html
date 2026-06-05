@@ -30,19 +30,29 @@
 </head>
 <body class="bg-white text-slate-800 antialiased">
 
+  <!-- PAGE LOADER -->
+  <div id="pageLoader" aria-hidden="true">
+    <div class="loader-logo">
+      <img src="assets/img/logo-secondary.svg" alt="RayCres Technologies" width="180" height="40" class="h-10 w-auto" />
+    </div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  </div>
+
   <!-- ============================= HEADER ============================= -->
-  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       <a href="index.html" class="flex items-center" aria-label="RayCres Technologies home">
         <img src="assets/img/logo-primary.svg" alt="RayCres Technologies" width="180" height="40" class="logo-full h-9 w-auto" />
         <img src="assets/img/logo-icon.svg" alt="RayCres" width="40" height="40" class="logo-compact h-9 w-9" />
       </a>
-      <nav class="hidden md:flex items-center gap-8" aria-label="Primary">
-        <a href="index.html" data-nav="index.html" class="text-slate-700 hover:text-brand-blue-600 transition">Home</a>
-        <a href="about.html" data-nav="about.html" class="text-slate-700 hover:text-brand-blue-600 transition">About</a>
-        <a href="index.html#services" class="text-slate-700 hover:text-brand-blue-600 transition">Services</a>
-        <a href="careers.html" data-nav="careers.html" class="text-slate-700 hover:text-brand-blue-600 transition">Careers</a>
-        <a href="contact.html" data-nav="contact.html" class="text-slate-700 hover:text-brand-blue-600 transition">Contact</a>
+      <nav class="hidden md:flex items-center gap-7" aria-label="Primary">
+        <a href="index.html" data-nav="index.html" class="nav-link text-slate-700 hover:text-brand-blue-600 font-medium transition">Home</a>
+        <a href="index.html#services" class="nav-link text-slate-700 hover:text-brand-blue-600 font-medium transition">Services</a>
+        <a href="solutions.html" data-nav="solutions.html" class="nav-link text-slate-700 hover:text-brand-blue-600 font-medium transition">Solutions</a>
+        <a href="technologies.html" data-nav="technologies.html" class="nav-link text-slate-700 hover:text-brand-blue-600 font-medium transition">Technologies</a>
+        <a href="about.html" data-nav="about.html" class="nav-link text-slate-700 hover:text-brand-blue-600 font-medium transition">About Us</a>
+        <a href="careers.html" data-nav="careers.html" class="nav-link text-slate-700 hover:text-brand-blue-600 font-medium transition">Careers</a>
+        <a href="contact.html" data-nav="contact.html" class="nav-link text-slate-700 hover:text-brand-blue-600 font-medium transition">Contact</a>
       </nav>
       <a href="contact.html" class="hidden md:inline-flex items-center gap-2 bg-brand-blue-600 hover:bg-brand-blue-900 text-white font-semibold px-5 py-2.5 rounded-xl transition shadow-sm">
         Get a Quote
@@ -52,13 +62,15 @@
       </button>
     </div>
     <div id="mobileNav" class="md:hidden border-t border-slate-200 bg-white">
-      <nav class="px-4 py-4 flex flex-col gap-3" aria-label="Mobile">
-        <a href="index.html" class="py-2 text-slate-800">Home</a>
-        <a href="about.html" class="py-2 text-slate-800">About</a>
-        <a href="index.html#services" class="py-2 text-slate-800">Services</a>
-        <a href="careers.html" class="py-2 text-slate-800">Careers</a>
-        <a href="contact.html" class="py-2 text-slate-800">Contact</a>
-        <a href="contact.html" class="mt-2 bg-brand-blue-600 text-white text-center font-semibold px-5 py-3 rounded-xl">Get a Quote</a>
+      <nav class="px-4 py-4 flex flex-col gap-1" aria-label="Mobile">
+        <a href="index.html" class="py-2.5 px-3 rounded-lg text-slate-800 hover:bg-slate-50">Home</a>
+        <a href="index.html#services" class="py-2.5 px-3 rounded-lg text-slate-800 hover:bg-slate-50">Services</a>
+        <a href="solutions.html" class="py-2.5 px-3 rounded-lg text-slate-800 hover:bg-slate-50">Solutions</a>
+        <a href="technologies.html" class="py-2.5 px-3 rounded-lg text-slate-800 hover:bg-slate-50">Technologies</a>
+        <a href="about.html" class="py-2.5 px-3 rounded-lg text-slate-800 hover:bg-slate-50">About Us</a>
+        <a href="careers.html" class="py-2.5 px-3 rounded-lg text-slate-800 hover:bg-slate-50">Careers</a>
+        <a href="contact.html" class="py-2.5 px-3 rounded-lg text-slate-800 hover:bg-slate-50">Contact</a>
+        <a href="https://wa.me/918113804245?text=Hi%2C%20I%27m%20interested%20in%20your%20services." target="_blank" rel="noopener" class="mt-2 bg-brand-blue-600 text-white text-center font-semibold px-5 py-3 rounded-xl">Get a Free Consultation</a>
       </nav>
     </div>
   </header>
@@ -66,78 +78,101 @@
   <main>
 
     <!-- ============================= HERO ============================= -->
-    <section class="hero-gradient text-white relative overflow-hidden">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 grid md:grid-cols-2 gap-12 items-center">
+    <section class="hero-gradient text-white relative overflow-hidden min-h-[88vh] flex items-center">
+      <!-- Animated shapes -->
+      <div class="hero-shape"></div>
+      <div class="hero-shape"></div>
+      <div class="hero-shape"></div>
+      <div class="hero-shape"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 grid md:grid-cols-2 gap-12 items-center relative z-10">
         <div class="reveal">
-          <span class="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white text-sm px-3 py-1 rounded-full mb-5">
-            <span class="w-2 h-2 rounded-full bg-brand-green-600"></span> Engineering excellence since day one
+          <span class="inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur-sm text-white text-sm px-4 py-1.5 rounded-full mb-6">
+            <span class="w-2 h-2 rounded-full bg-brand-green-600 animate-pulse"></span> Trusted by teams worldwide
           </span>
-          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
-            Engineering Tomorrow's <span class="text-brand-green-600">Digital Edge</span>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight">
+            Build Innovative <span class="gradient-text">Digital Solutions</span> for Your Business
           </h1>
-          <p class="mt-6 text-lg md:text-xl text-blue-100/90 max-w-xl">
-            RayCres Technologies builds AI-powered platforms, modern web & mobile experiences, and resilient cloud infrastructure for ambitious teams worldwide.
+          <p class="mt-6 text-lg md:text-xl text-blue-100/90 max-w-xl leading-relaxed">
+            Web Development · Mobile Apps · AI &amp; Automation · Cloud Solutions<br/>
+            <span class="text-blue-200/70 text-base">End-to-end engineering delivered with craft, speed, and reliability.</span>
           </p>
-          <div class="mt-8 flex flex-wrap gap-4">
-            <a href="#services" class="inline-flex items-center gap-2 bg-brand-green-600 hover:bg-emerald-500 text-white font-semibold px-6 py-3 rounded-xl shadow-lg transition">
-              Explore Services
+          <div class="mt-10 flex flex-wrap gap-4">
+            <a href="https://wa.me/918113804245?text=Hi%2C%20I'm%20interested%20in%20your%20services." target="_blank" rel="noopener" class="glow-btn inline-flex items-center gap-2 bg-brand-green-600 hover:bg-emerald-500 text-white font-semibold px-7 py-4 rounded-xl shadow-lg shadow-emerald-500/25 transition-all hover:scale-105">
+              Get a Free Consultation
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
             </a>
-            <a href="contact.html" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-6 py-3 rounded-xl transition">
+            <a href="contact.html" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white font-semibold px-7 py-4 rounded-xl transition-all hover:scale-105">
               Contact Us
             </a>
+          </div>
+          <div class="hidden md:flex items-center gap-2 mt-14 text-blue-200/60 scroll-indicator">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+            <span class="text-sm">Scroll to explore</span>
           </div>
         </div>
         <!-- Hero illustration -->
         <div class="reveal hidden md:block" aria-hidden="true">
-          <svg viewBox="0 0 500 400" class="w-full h-auto drop-shadow-2xl">
+          <svg viewBox="0 0 500 420" class="w-full h-auto drop-shadow-2xl">
             <defs>
               <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
                 <stop offset="0%" stop-color="#10B981" stop-opacity=".9"/>
                 <stop offset="100%" stop-color="#1E4FD8" stop-opacity=".9"/>
               </linearGradient>
+              <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
             </defs>
-            <circle cx="380" cy="120" r="80" fill="url(#g1)" opacity="0.35"/>
-            <rect x="60" y="80" width="320" height="220" rx="20" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.25)"/>
-            <rect x="80" y="110" width="120" height="14" rx="4" fill="rgba(255,255,255,0.5)"/>
-            <rect x="80" y="135" width="200" height="10" rx="3" fill="rgba(255,255,255,0.3)"/>
-            <rect x="80" y="155" width="160" height="10" rx="3" fill="rgba(255,255,255,0.3)"/>
-            <rect x="80" y="195" width="80" height="60" rx="10" fill="#10B981" opacity=".85"/>
-            <rect x="170" y="195" width="80" height="60" rx="10" fill="#1E4FD8" opacity=".9"/>
-            <rect x="260" y="195" width="80" height="60" rx="10" fill="rgba(255,255,255,0.25)"/>
-            <circle cx="100" cy="225" r="12" fill="#fff" opacity=".9"/>
-            <circle cx="190" cy="225" r="12" fill="#fff" opacity=".9"/>
-            <path d="M40 340 Q150 280 260 340 T480 340" stroke="#10B981" stroke-width="3" fill="none" opacity=".7"/>
+            <circle cx="390" cy="110" r="90" fill="url(#g1)" opacity="0.3"/>
+            <rect x="50" y="70" width="340" height="240" rx="22" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.2)" filter="url(#glow)"/>
+            <rect x="72" y="100" width="130" height="15" rx="4" fill="rgba(255,255,255,0.5)"/>
+            <rect x="72" y="126" width="210" height="9" rx="3" fill="rgba(255,255,255,0.25)"/>
+            <rect x="72" y="145" width="170" height="9" rx="3" fill="rgba(255,255,255,0.25)"/>
+            <!-- Cards row -->
+            <rect x="72" y="185" width="88" height="70" rx="12" fill="#10B981" opacity=".85"/>
+            <rect x="170" y="185" width="88" height="70" rx="12" fill="#1E4FD8" opacity=".9"/>
+            <rect x="268" y="185" width="88" height="70" rx="12" fill="rgba(255,255,255,0.2)"/>
+            <circle cx="93" cy="218" r="14" fill="#fff" opacity=".9"/>
+            <circle cx="191" cy="218" r="14" fill="#fff" opacity=".9"/>
+            <!-- Stat bar -->
+            <rect x="72" y="275" width="284" height="22" rx="6" fill="rgba(255,255,255,0.08)"/>
+            <rect x="72" y="275" width="180" height="22" rx="6" fill="#10B981" opacity=".7"/>
+            <!-- Wave -->
+            <path d="M30 380 Q150 320 270 380 T510 380" stroke="#10B981" stroke-width="3" fill="none" opacity=".6"/>
           </svg>
         </div>
       </div>
     </section>
 
-    <!-- ============================= TODO: STATS / INTRO ============================= -->
-    <!-- <section class="py-16 md:py-20">
+    <!-- ============================= STATS ============================= -->
+    <section class="py-14 md:py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid md:grid-cols-3 gap-6 mb-16">
-          <div class="reveal text-center p-8 rounded-2xl bg-brand-blue-50 border border-blue-100">
-            <div class="text-4xl font-extrabold text-brand-blue-900">150+</div>
-            <div class="text-slate-600 mt-2">Projects delivered</div>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+          <div class="reveal text-center p-6 md:p-8 rounded-2xl bg-brand-blue-50 border border-blue-100 hover:shadow-md transition">
+            <div class="text-4xl md:text-5xl font-extrabold text-brand-blue-900">
+              <span class="stat-number" data-count="50" data-suffix="+">50+</span>
+            </div>
+            <div class="text-slate-600 mt-2 font-medium">Projects Delivered</div>
           </div>
-          <div class="reveal text-center p-8 rounded-2xl bg-brand-green-50 border border-emerald-100">
-            <div class="text-4xl font-extrabold text-brand-blue-900">60+</div>
-            <div class="text-slate-600 mt-2">Happy clients</div>
+          <div class="reveal text-center p-6 md:p-8 rounded-2xl bg-brand-green-50 border border-emerald-100 hover:shadow-md transition">
+            <div class="text-4xl md:text-5xl font-extrabold text-brand-blue-900">
+              <span class="stat-number" data-count="30" data-suffix="+">30+</span>
+            </div>
+            <div class="text-slate-600 mt-2 font-medium">Happy Clients</div>
           </div>
-          <div class="reveal text-center p-8 rounded-2xl bg-brand-blue-50 border border-blue-100">
-            <div class="text-4xl font-extrabold text-brand-blue-900">12</div>
-            <div class="text-slate-600 mt-2">Countries served</div>
+          <div class="reveal text-center p-6 md:p-8 rounded-2xl bg-brand-blue-50 border border-blue-100 hover:shadow-md transition">
+            <div class="text-4xl md:text-5xl font-extrabold text-brand-blue-900">
+              <span class="stat-number" data-count="10" data-suffix="+">10+</span>
+            </div>
+            <div class="text-slate-600 mt-2 font-medium">Team Members</div>
           </div>
-        </div>
-        <div class="reveal max-w-3xl mx-auto text-center">
-          <h2 class="text-3xl md:text-4xl font-bold text-brand-blue-900">Your engineering partner for digital growth</h2>
-          <p class="mt-5 text-lg text-slate-600">
-            We pair strategic product thinking with deep technical craft — turning ideas into reliable, beautifully engineered software that compounds value for your business.
-          </p>
+          <div class="reveal text-center p-6 md:p-8 rounded-2xl bg-brand-green-50 border border-emerald-100 hover:shadow-md transition">
+            <div class="text-4xl md:text-5xl font-extrabold text-brand-blue-900">
+              <span class="stat-number" data-count="5" data-suffix="+">5+</span>
+            </div>
+            <div class="text-slate-600 mt-2 font-medium">Years of Experience</div>
+          </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
     <!-- ============================= SERVICES ============================= -->
     <section id="services" class="py-16 md:py-24 bg-slate-50 scroll-mt-20">
@@ -256,6 +291,54 @@
       </div>
     </section>
 
+    <!-- ============================= WHY CHOOSE US ============================= -->
+    <section class="py-16 md:py-24 bg-brand-blue-900 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center max-w-2xl mx-auto mb-14">
+          <span class="text-brand-green-600 font-semibold uppercase tracking-wider text-sm">Why us</span>
+          <h2 class="mt-3 text-3xl md:text-4xl font-bold">Why Choose RayCres?</h2>
+          <p class="mt-4 text-blue-100/80">We combine deep expertise with a genuine commitment to your success.</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
+          <div class="reveal card-lift p-6 rounded-2xl bg-white/5 border border-white/10 text-center hover:bg-white/10 transition">
+            <div class="w-14 h-14 rounded-2xl bg-brand-blue-600/40 text-brand-green-600 flex items-center justify-center mx-auto mb-4">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="font-semibold text-white">Experienced Team</h3>
+            <p class="text-sm text-blue-200/70 mt-2">Senior engineers with domain expertise across every discipline.</p>
+          </div>
+          <div class="reveal card-lift p-6 rounded-2xl bg-white/5 border border-white/10 text-center hover:bg-white/10 transition">
+            <div class="w-14 h-14 rounded-2xl bg-brand-blue-600/40 text-brand-green-600 flex items-center justify-center mx-auto mb-4">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            </div>
+            <h3 class="font-semibold text-white">Agile Development</h3>
+            <p class="text-sm text-blue-200/70 mt-2">Sprint-based delivery with weekly demos and full transparency.</p>
+          </div>
+          <div class="reveal card-lift p-6 rounded-2xl bg-white/5 border border-white/10 text-center hover:bg-white/10 transition">
+            <div class="w-14 h-14 rounded-2xl bg-brand-blue-600/40 text-brand-green-600 flex items-center justify-center mx-auto mb-4">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+            </div>
+            <h3 class="font-semibold text-white">Quality Assurance</h3>
+            <p class="text-sm text-blue-200/70 mt-2">Rigorous testing at every layer so bugs never reach production.</p>
+          </div>
+          <div class="reveal card-lift p-6 rounded-2xl bg-white/5 border border-white/10 text-center hover:bg-white/10 transition">
+            <div class="w-14 h-14 rounded-2xl bg-brand-blue-600/40 text-brand-green-600 flex items-center justify-center mx-auto mb-4">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3 class="font-semibold text-white">On-Time Delivery</h3>
+            <p class="text-sm text-blue-200/70 mt-2">Committed timelines backed by a proven project management process.</p>
+          </div>
+          <div class="reveal card-lift p-6 rounded-2xl bg-white/5 border border-white/10 text-center hover:bg-white/10 transition">
+            <div class="w-14 h-14 rounded-2xl bg-brand-blue-600/40 text-brand-green-600 flex items-center justify-center mx-auto mb-4">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3 class="font-semibold text-white">Dedicated Support</h3>
+            <p class="text-sm text-blue-200/70 mt-2">Post-launch support and a single point of contact for every client.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ============================= CTA BANNER ============================= -->
     <section class="py-12">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -266,7 +349,7 @@
           </div>
           <div class="flex gap-3 flex-wrap">
             <a href="careers.html" class="bg-white text-brand-blue-900 font-semibold px-6 py-3 rounded-xl hover:bg-slate-100 transition">Open Roles</a>
-            <a href="contact.html" class="bg-brand-blue-900 text-white font-semibold px-6 py-3 rounded-xl hover:bg-black/40 transition">Contact Us</a>
+            <a href="https://wa.me/918113804245?text=Hi%2C%20I%27m%20interested%20in%20your%20services." target="_blank" rel="noopener" class="bg-brand-blue-900 text-white font-semibold px-6 py-3 rounded-xl hover:bg-black/40 transition">Get a Free Consultation</a>
           </div>
         </div>
       </div>
@@ -279,13 +362,30 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid md:grid-cols-4 gap-10">
       <div>
         <img src="assets/img/logo-secondary.svg" alt="RayCres Technologies" width="180" height="40" class="h-9 w-auto mb-4" />
-        <p class="text-sm text-blue-100/80">Engineering tomorrow's digital edge — AI, web, mobile, and cloud, delivered with craft.</p>
+        <p class="text-sm text-blue-100/80 mb-5">Building innovative digital solutions — AI, web, mobile, and cloud, delivered with craft.</p>
+        <!-- Social links -->
+        <div class="flex gap-3">
+          <a href="#" aria-label="LinkedIn" class="w-9 h-9 rounded-lg bg-white/10 hover:bg-brand-blue-600 flex items-center justify-center transition">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.5c0-1.3-.02-3-1.83-3-1.83 0-2.11 1.43-2.11 2.9V21H9z"/></svg>
+          </a>
+          <a href="#" aria-label="Twitter" class="w-9 h-9 rounded-lg bg-white/10 hover:bg-brand-blue-600 flex items-center justify-center transition">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 5.8c-.7.3-1.5.5-2.4.6.9-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1A4.1 4.1 0 0 0 12 9.1c0 .3 0 .6.1.9A11.7 11.7 0 0 1 3.4 5.5a4.1 4.1 0 0 0 1.3 5.5c-.7 0-1.3-.2-1.9-.5v.1a4.1 4.1 0 0 0 3.3 4 4.2 4.2 0 0 1-1.9.1 4.1 4.1 0 0 0 3.8 2.8A8.3 8.3 0 0 1 2 19.2 11.7 11.7 0 0 0 8.3 21c7.5 0 11.6-6.2 11.6-11.6v-.5A8.3 8.3 0 0 0 22 5.8z"/></svg>
+          </a>
+          <a href="#" aria-label="GitHub" class="w-9 h-9 rounded-lg bg-white/10 hover:bg-brand-blue-600 flex items-center justify-center transition">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C16.9 4.6 17.9 5 17.9 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.4.5 12 .5z"/></svg>
+          </a>
+          <a href="https://wa.me/918113804245" aria-label="WhatsApp" class="w-9 h-9 rounded-lg bg-white/10 hover:bg-[#25D366] flex items-center justify-center transition">
+            <svg width="16" height="16" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.837.74 5.491 2.031 7.797L0 32l8.438-2.212A15.927 15.927 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.195 22.865c-.344.969-1.719 1.781-2.813 2.016-.75.156-1.719.281-5-1.078-4.203-1.734-6.906-6-7.109-6.281-.203-.281-1.672-2.234-1.672-4.266 0-2.031 1.063-3.031 1.438-3.438.375-.406.813-.5 1.078-.5.266 0 .531 0 .766.016.25.016.578-.094.906.688.344.797 1.156 2.828 1.266 3.031.109.203.172.438.031.703-.141.266-.219.438-.438.672-.219.234-.453.516-.656.703-.219.203-.453.422-.203.828.25.406 1.109 1.828 2.375 2.953 1.641 1.469 3.016 1.922 3.438 2.141.422.219.672.188.922-.109.25-.297 1.063-1.234 1.344-1.656.281-.422.563-.344.938-.203.375.141 2.375 1.125 2.781 1.328.406.203.672.313.781.484.109.172.109.984-.234 1.953z"/></svg>
+          </a>
+        </div>
       </div>
       <div>
-        <h4 class="text-white font-semibold mb-4">Company</h4>
+        <h4 class="text-white font-semibold mb-4">Quick Links</h4>
         <ul class="space-y-2 text-sm">
           <li><a href="index.html" class="hover:text-white">Home</a></li>
-          <li><a href="about.html" class="hover:text-white">About</a></li>
+          <li><a href="solutions.html" class="hover:text-white">Solutions</a></li>
+          <li><a href="technologies.html" class="hover:text-white">Technologies</a></li>
+          <li><a href="about.html" class="hover:text-white">About Us</a></li>
           <li><a href="careers.html" class="hover:text-white">Careers</a></li>
           <li><a href="contact.html" class="hover:text-white">Contact</a></li>
         </ul>
@@ -302,21 +402,35 @@
         </ul>
       </div>
       <div>
-        <h4 class="text-white font-semibold mb-4">Get in touch</h4>
-        <ul class="space-y-2 text-sm">
-          <li>Email: <a href="mailto:hello@raycres.com" class="hover:text-white">hello@raycres.com</a></li>
-          <li>Phone: <a href="tel:+910000000000" class="hover:text-white">+91 00000 00000</a></li>
-          <li>Bengaluru, India</li>
+        <h4 class="text-white font-semibold mb-4">Contact Information</h4>
+        <ul class="space-y-3 text-sm">
+          <li class="flex items-start gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="mt-0.5 flex-shrink-0 text-brand-green-600" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:sivapriya4570@gmail.com" class="hover:text-white">sivapriya4570@gmail.com</a>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="mt-0.5 flex-shrink-0 text-brand-green-600" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.11 12 19.79 19.79 0 0 1 1 3.18 2 2 0 0 1 3 1h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+918113804245" class="hover:text-white">+91 81138 04245</a>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="mt-0.5 flex-shrink-0 text-brand-green-600" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>123 Tech Park, MG Road,<br/>Bengaluru, KA 560001, India</span>
+          </li>
         </ul>
       </div>
     </div>
     <div class="border-t border-white/10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 text-sm text-blue-100/70 flex flex-col md:flex-row justify-between gap-2">
         <p>&copy; <span data-year>2026</span> RayCres Technologies Pvt Ltd. All rights reserved.</p>
-        <p>Crafted with care.</p>
+        <p>Crafted with care in Bengaluru, India.</p>
       </div>
     </div>
   </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/918113804245?text=Hi%2C%20I'm%20interested%20in%20your%20services." target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.837.74 5.491 2.031 7.797L0 32l8.438-2.212A15.927 15.927 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.195 22.865c-.344.969-1.719 1.781-2.813 2.016-.75.156-1.719.281-5-1.078-4.203-1.734-6.906-6-7.109-6.281-.203-.281-1.672-2.234-1.672-4.266 0-2.031 1.063-3.031 1.438-3.438.375-.406.813-.5 1.078-.5.266 0 .531 0 .766.016.25.016.578-.094.906.688.344.797 1.156 2.828 1.266 3.031.109.203.172.438.031.703-.141.266-.219.438-.438.672-.219.234-.453.516-.656.703-.219.203-.453.422-.203.828.25.406 1.109 1.828 2.375 2.953 1.641 1.469 3.016 1.922 3.438 2.141.422.219.672.188.922-.109.25-.297 1.063-1.234 1.344-1.656.281-.422.563-.344.938-.203.375.141 2.375 1.125 2.781 1.328.406.203.672.313.781.484.109.172.109.984-.234 1.953z"/></svg>
+  </a>
 
   <script src="assets/js/main.js" defer></script>
 </body>

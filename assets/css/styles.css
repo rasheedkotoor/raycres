@@ -77,9 +77,99 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, sans-serif; }
   .logo-compact { display: inline-block; }
 }
 
+/* ===== PAGE LOADER ===== */
+#pageLoader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: var(--brand-blue-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+#pageLoader.loaded {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.loader-logo {
+  animation: loaderPulse 1.2s ease-in-out infinite;
+}
+@keyframes loaderPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%       { transform: scale(1.08); opacity: 0.7; }
+}
+.loader-bar {
+  width: 160px;
+  height: 3px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 99px;
+  overflow: hidden;
+}
+.loader-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #10B981, #1E4FD8);
+  border-radius: 99px;
+  animation: loadProgress 1.4s ease forwards;
+}
+@keyframes loadProgress {
+  0%   { width: 0%; }
+  60%  { width: 75%; }
+  100% { width: 100%; }
+}
+
+/* ===== COUNTER NUMBERS ===== */
+.stat-number {
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+}
+
+/* WhatsApp floating button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  width: 56px;
+  height: 56px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(37,211,102,0.45);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.whatsapp-float svg {
+  width: 30px;
+  height: 30px;
+  fill: #fff;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 24px rgba(37,211,102,0.6);
+}
+.whatsapp-float::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: rgba(37,211,102,0.4);
+  animation: pulse-ring 2s ease-out infinite;
+}
+@keyframes pulse-ring {
+  0%   { transform: scale(1);   opacity: 0.6; }
+  100% { transform: scale(1.7); opacity: 0; }
+}
+
 /* Honor reduced motion */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
+  #pageLoader { display: none !important; }
   * { animation: none !important; transition: none !important; }
 }

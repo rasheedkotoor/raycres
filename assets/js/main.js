@@ -1,9 +1,20 @@
 /* RayCres Technologies — main JS
- * Handles: footer year, mobile nav, smooth scroll, scroll-reveal,
- *          mailto form submissions with validation + toast.
+ * Handles: page loader, footer year, mobile nav, smooth scroll, scroll-reveal,
+ *          counter animations, mailto form submissions with validation + toast.
  */
 (function () {
   'use strict';
+
+  // -- Page loader ---------------------------------------------------------
+  // Script runs deferred (after DOM parse), so window.load is not needed.
+  // Plain timeout is reliable regardless of CDN/font load timing.
+  const loader = document.getElementById('pageLoader');
+  if (loader) {
+    const dismissLoader = () => loader.classList.add('loaded');
+    setTimeout(dismissLoader, 900);
+    // Failsafe: also dismiss on window.load in case timeout fires too early
+    window.addEventListener('load', () => setTimeout(dismissLoader, 300), { once: true });
+  }
 
   // -- Footer year ---------------------------------------------------------
   document.querySelectorAll('[data-year]').forEach(el => {
@@ -19,7 +30,6 @@
       navToggle.classList.toggle('is-open', open);
       navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
-    // Close on link click
     mobileNav.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
         mobileNav.classList.remove('open');
@@ -43,6 +53,36 @@
     revealEls.forEach(el => io.observe(el));
   } else {
     revealEls.forEach(el => el.classList.add('is-visible'));
+  }
+
+  // -- Counter animation ---------------------------------------------------
+  function animateCounter(el) {
+    const target = parseInt(el.dataset.count, 10);
+    const suffix = el.dataset.suffix || '';
+    const duration = 1800;
+    const startTime = performance.now();
+    function step(now) {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      // Ease out cubic
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.floor(eased * target) + suffix;
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  const statEls = document.querySelectorAll('[data-count]');
+  if ('IntersectionObserver' in window && statEls.length) {
+    const counterIO = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          animateCounter(e.target);
+          counterIO.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    statEls.forEach(el => counterIO.observe(el));
   }
 
   // -- Collapsible job cards (Careers) ------------------------------------
@@ -113,12 +153,8 @@
   document.querySelectorAll('form[data-mailto]').forEach(form => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      if (!validateForm(form)) {
-        showToast('Please fix the highlighted fields.');
-        return;
-      }
-      const href = buildMailto(form);
-      window.location.href = href;
+      if (!validateForm(form)) { showToast('Please fix the highlighted fields.'); return; }
+      window.location.href = buildMailto(form);
       showToast('Opening your email client…');
       setTimeout(() => form.reset(), 600);
     });
@@ -127,8 +163,7 @@
   // -- Active nav link -----------------------------------------------------
   const path = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
   document.querySelectorAll('[data-nav]').forEach(a => {
-    const target = a.getAttribute('data-nav').toLowerCase();
-    if (target === path) {
+    if (a.getAttribute('data-nav').toLowerCase() === path) {
       a.classList.add('text-brand-blue-600', 'font-semibold');
     }
   });

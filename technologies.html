@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Technologies — RayCres Technologies</title>
+  <meta name="description" content="The modern technology stack powering RayCres Technologies solutions — frontend, backend, mobile, AI, cloud, and DevOps." />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+        colors: {
+          'brand-blue': { 50: '#EAF1FF', 600: '#1E4FD8', 900: '#0B2A4A' },
+          'brand-green': { 50: '#ECFDF5', 600: '#10B981' }
+        }
+      } }
+    };
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="bg-white text-slate-800 antialiased">
+
+  <!-- PAGE LOADER -->
+  <div id="pageLoader" aria-hidden="true">
+    <div class="loader-logo">
+      <img src="assets/img/logo-secondary.svg" alt="RayCres Technologies" width="180" height="40" class="h-10 w-auto" />
+    </div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center" aria-label="RayCres Technologies home">
+        <img src="assets/img/logo-primary.svg" alt="RayCres Technologies" width="180" height="40" class="logo-full h-9 w-auto" />
+        <img src="assets/img/logo-icon.svg" alt="RayCres" width="40" height="40" class="logo-compact h-9 w-9" />
+      </a>
+      <nav class="hidden md:flex items-center gap-7" aria-label="Primary">
+        <a href="index.html" data-nav="index.html" class="nav-link text-slate-700 hover:text-brand-blue-600 font-medium transition">Home</a>
+        <a href="index.html#services" class="nav-link text-slate-700 hover:text-brand-blue-600 font-medium transition">Services</a>
+        <a href="solutions.html" data-nav="solutions.html" class="nav-link text-slate-700 hover:text-brand-blue-600 font-medium transition">Solutions</a>
+        <a href="technologies.html" data-nav="technologies.html" class="nav-link text-slate-700 hover:text-brand-blue-600 font-medium transition">Technologies</a>
+        <a href="about.html" data-nav="about.html" class="nav-link text-slate-700 hover:text-brand-blue-600 font-medium transition">About Us</a>
+        <a href="careers.html" data-nav="careers.html" class="nav-link text-slate-700 hover:text-brand-blue-600 font-medium transition">Careers</a>
+        <a href="contact.html" data-nav="contact.html" class="nav-link text-slate-700 hover:text-brand-blue-600 font-medium transition">Contact</a>
+      </nav>
+      <a href="contact.html" class="hidden md:inline-flex items-center gap-2 bg-brand-blue-600 hover:bg-brand-blue-900 text-white font-semibold px-5 py-2.5 rounded-xl transition shadow-sm">Get a Quote</a>
+      <button id="navToggle" class="hamburger md:hidden text-brand-blue-900 p-2" aria-label="Toggle navigation" aria-controls="mobileNav" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div id="mobileNav" class="md:hidden border-t border-slate-200 bg-white">
+      <nav class="px-4 py-4 flex flex-col gap-1" aria-label="Mobile">
+        <a href="index.html" class="py-2.5 px-3 rounded-lg text-slate-800 hover:bg-slate-50">Home</a>
+        <a href="index.html#services" class="py-2.5 px-3 rounded-lg text-slate-800 hover:bg-slate-50">Services</a>
+        <a href="solutions.html" class="py-2.5 px-3 rounded-lg text-slate-800 hover:bg-slate-50">Solutions</a>
+        <a href="technologies.html" class="py-2.5 px-3 rounded-lg text-slate-800 hover:bg-slate-50">Technologies</a>
+        <a href="about.html" class="py-2.5 px-3 rounded-lg text-slate-800 hover:bg-slate-50">About Us</a>
+        <a href="careers.html" class="py-2.5 px-3 rounded-lg text-slate-800 hover:bg-slate-50">Careers</a>
+        <a href="contact.html" class="py-2.5 px-3 rounded-lg text-slate-800 hover:bg-slate-50">Contact</a>
+        <a href="https://wa.me/918113804245?text=Hi%2C%20I%27m%20interested%20in%20your%20services." target="_blank" rel="noopener" class="mt-2 bg-brand-blue-600 text-white text-center font-semibold px-5 py-3 rounded-xl">Get a Free Consultation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero-gradient text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 text-center">
+        <span class="inline-block bg-white/10 border border-white/20 text-sm px-3 py-1 rounded-full mb-4 reveal">Our Tech Stack</span>
+        <h1 class="reveal text-4xl md:text-5xl font-extrabold leading-tight">Modern tools. Proven stack.</h1>
+        <p class="reveal mt-5 text-lg text-blue-100/90 max-w-2xl mx-auto">
+          We use battle-tested, industry-leading technologies to build reliable, high-performance software — and we stay current.
+        </p>
+      </div>
+    </section>
+
+    <!-- TECH STACK SECTIONS -->
+    <section class="py-16 md:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+
+        <!-- Frontend -->
+        <div class="reveal">
+          <div class="flex items-center gap-3 mb-8">
+            <div class="w-10 h-10 rounded-xl bg-brand-blue-50 text-brand-blue-600 flex items-center justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18"/></svg>
+            </div>
+            <h2 class="text-2xl font-bold text-brand-blue-900">Frontend</h2>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            <!-- Tech badge helper (repeated pattern) -->
+            <div class="card-lift flex flex-col items-center gap-2 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-blue-600 transition text-center">
+              <span class="w-10 h-10 rounded-lg bg-brand-blue-50 flex items-center justify-center text-lg font-bold text-brand-blue-600">Re</span>
+              <span class="text-sm font-medium text-slate-700">React</span>
+            </div>
+            <div class="card-lift flex flex-col items-center gap-2 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-blue-600 transition text-center">
+              <span class="w-10 h-10 rounded-lg bg-brand-blue-50 flex items-center justify-center text-lg font-bold text-brand-blue-600">Nx</span>
+              <span class="text-sm font-medium text-slate-700">Next.js</span>
+            </div>
+            <div class="card-lift flex flex-col items-center gap-2 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-blue-600 transition text-center">
+              <span class="w-10 h-10 rounded-lg bg-brand-green-50 flex items-center justify-center text-lg font-bold text-brand-green-600">Vt</span>
+              <span class="text-sm font-medium text-slate-700">Vue / Nuxt</span>
+            </div>
+            <div class="card-lift flex flex-col items-center gap-2 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-blue-600 transition text-center">
+              <span class="w-10 h-10 rounded-lg bg-brand-blue-50 flex items-center justify-center text-lg font-bold text-brand-blue-600">Tw</span>
+              <span class="text-sm font-medium text-slate-700">Tailwind CSS</span>
+            </div>
+            <div class="card-lift flex flex-col items-center gap-2 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-blue-600 transition text-center">
+              <span class="w-10 h-10 rounded-lg bg-brand-green-50 flex items-center justify-center text-lg font-bold text-brand-green-600">TS</span>
+              <span class="text-sm font-medium text-slate-700">TypeScript</span>
+            </div>
+            <div class="card-lift flex flex-col items-center gap-2 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-blue-600 transition text-center">
+              <span class="w-10 h-10 rounded-lg bg-brand-blue-50 flex items-center justify-center text-lg font-bold text-brand-blue-600">Vt</span>
+              <span class="text-sm font-medium text-slate-700">Vite</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="reveal">
+          <div class="flex items-center gap-3 mb-8">
+            <div class="w-10 h-10 rounded-xl bg-brand-green-50 text-brand-green-600 flex items-center justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </div>
+            <h2 class="text-2xl font-bold text-brand-blue-900">Backend &amp; API</h2>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            <div class="card-lift flex flex-col items-center gap-2 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-blue-600 transition text-center"><span class="w-10 h-10 rounded-lg bg-brand-green-50 flex items-center justify-center font-bold text-brand-green-600">No</span><span class="text-sm font-medium text-slate-700">Node.js</span></div>
+            <div class="card-lift flex flex-col items-center gap-2 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-blue-600 transition text-center"><span class="w-10 h-10 rounded-lg bg-brand-blue-50 flex items-center justify-center font-bold text-brand-blue-600">Py</span><span class="text-sm font-medium text-slate-700">Python</span></div>
+            <div class="card-lift flex flex-col items-center gap-2 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-blue-600 transition text-center"><span class="w-10 h-10 rounded-lg bg-brand-green-50 flex items-center justify-center font-bold text-brand-green-600">Fa</span><span class="text-sm font-medium text-slate-700">FastAPI</span></div>
+            <div class="card-lift flex flex-col items-center gap-2 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-blue-600 transition text-center"><span class="w-10 h-10 rounded-lg bg-brand-blue-50 flex items-center justify-center font-bold text-brand-blue-600">Gq</span><span class="text-sm font-medium text-slate-700">GraphQL</span></div>
+            <div class="card-lift flex flex-col items-center gap-2 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-blue-600 transition text-center"><span class="w-10 h-10 rounded-lg bg-brand-green-50 flex items-center justify-center font-bold text-brand-green-600">Pg</span><span class="text-sm font-medium text-slate-700">PostgreSQL</span></div>
+            <div class="card-lift flex flex-col items-center gap-2 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-blue-600 transition text-center"><span class="w-10 h-10 rounded-lg bg-brand-blue-50 flex items-center justify-center font-bold text-brand-blue-600">Mg</span><span class="text-sm font-medium text-slate-700">MongoDB</span></div>
+          </div>
+        </div>
+
+        <!-- Mobile -->
+        <div class="reveal">
+          <div class="flex items-center gap-3 mb-8">
+            <div class="w-10 h-10 rounded-xl bg-brand-blue-50 text-brand-blue-600 flex items-center justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+            </div>
+            <h2 class="text-2xl font-bold text-brand-blue-900">Mobile</h2>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            <div class="card-lift flex flex-col items-center gap-2 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-blue-600 transition text-center"><span class="w-10 h-10 rounded-lg bg-brand-blue-50 flex items-center justify-center font-bold text-brand-blue-600">RN</span><span class="text-sm font-medium text-slate-700">React Native</span></div>
+            <div class="card-lift flex flex-col items-center gap-2 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-blue-600 transition text-center"><span class="w-10 h-10 rounded-lg bg-brand-green-50 flex items-center justify-center font-bold text-brand-green-600">Fl</span><span class="text-sm font-medium text-slate-700">Flutter</span></div>
+            <div class="card-lift flex flex-col items-center gap-2 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-blue-600 transition text-center"><span class="w-10 h-10 rounded-lg bg-brand-blue-50 flex items-center justify-center font-bold text-brand-blue-600">Sw</span><span class="text-sm font-medium text-slate-700">Swift (iOS)</span></div>
+            <div class="card-lift flex flex-col items-center gap-2 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-blue-600 transition text-center"><span class="w-10 h-10 rounded-lg bg-brand-green-50 flex items-center justify-center font-bold text-brand-green-600">Kt</span><span class="text-sm font-medium text-slate-700">Kotlin (Android)</span></div>
+          </div>
+        </div>
+
+        <!-- AI / ML -->
+        <div class="reveal">
+          <div class="flex items-center gap-3 mb-8">
+            <div class="w-10 h-10 rounded-xl bg-brand-green-50 text-brand-green-600 flex items-center justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a4 4 0 0 0-4 4v1a4 4 0 0 0-2 7 4 4 0 0 0 2 7v1a4 4 0 0 0 8 0v-1a4 4 0 0 0 2-7 4 4 0 0 0-2-7V6a4 4 0 0 0-4-4z"/></svg>
+            </div>
+            <h2 class="text-2xl font-bold text-brand-blue-900">AI &amp; Machine Learning</h2>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            <div class="card-lift flex flex-col items-center gap-2 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-blue-600 transition text-center"><span class="w-10 h-10 rounded-lg bg-brand-green-50 flex items-center justify-center font-bold text-brand-green-600">PT</span><span class="text-sm font-medium text-slate-700">PyTorch</span></div>
+            <div class="card-lift flex flex-col items-center gap-2 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-blue-600 transition text-center"><span class="w-10 h-10 rounded-lg bg-brand-blue-50 flex items-center justify-center font-bold text-brand-blue-600">TF</span><span class="text-sm font-medium text-slate-700">TensorFlow</span></div>
+            <div class="card-lift flex flex-col items-center gap-2 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-blue-600 transition text-center"><span class="w-10 h-10 rounded-lg bg-brand-green-50 flex items-center justify-center font-bold text-brand-green-600">LC</span><span class="text-sm font-medium text-slate-700">LangChain</span></div>
+            <div class="card-lift flex flex-col items-center gap-2 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-blue-600 transition text-center"><span class="w-10 h-10 rounded-lg bg-brand-blue-50 flex items-center justify-center font-bold text-brand-blue-600">OA</span><span class="text-sm font-medium text-slate-700">OpenAI API</span></div>
+            <div class="card-lift flex flex-col items-center gap-2 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-blue-600 transition text-center"><span class="w-10 h-10 rounded-lg bg-brand-green-50 flex items-center justify-center font-bold text-brand-green-600">HF</span><span class="text-sm font-medium text-slate-700">HuggingFace</span></div>
+            <div class="card-lift flex flex-col items-center gap-2 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-blue-600 transition text-center"><span class="w-10 h-10 rounded-lg bg-brand-blue-50 flex items-center justify-center font-bold text-brand-blue-600">PG</span><span class="text-sm font-medium text-slate-700">pgvector / RAG</span></div>
+          </div>
+        </div>
+
+        <!-- Cloud / DevOps -->
+        <div class="reveal">
+          <div class="flex items-center gap-3 mb-8">
+            <div class="w-10 h-10 rounded-xl bg-brand-blue-50 text-brand-blue-600 flex items-center justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+            </div>
+            <h2 class="text-2xl font-bold text-brand-blue-900">Cloud &amp; DevOps</h2>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            <div class="card-lift flex flex-col items-center gap-2 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-blue-600 transition text-center"><span class="w-10 h-10 rounded-lg bg-brand-green-50 flex items-center justify-center font-bold text-brand-green-600">AW</span><span class="text-sm font-medium text-slate-700">AWS</span></div>
+            <div class="card-lift flex flex-col items-center gap-2 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-blue-600 transition text-center"><span class="w-10 h-10 rounded-lg bg-brand-blue-50 flex items-center justify-center font-bold text-brand-blue-600">GC</span><span class="text-sm font-medium text-slate-700">GCP</span></div>
+            <div class="card-lift flex flex-col items-center gap-2 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-blue-600 transition text-center"><span class="w-10 h-10 rounded-lg bg-brand-green-50 flex items-center justify-center font-bold text-brand-green-600">Dk</span><span class="text-sm font-medium text-slate-700">Docker</span></div>
+            <div class="card-lift flex flex-col items-center gap-2 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-blue-600 transition text-center"><span class="w-10 h-10 rounded-lg bg-brand-blue-50 flex items-center justify-center font-bold text-brand-blue-600">K8</span><span class="text-sm font-medium text-slate-700">Kubernetes</span></div>
+            <div class="card-lift flex flex-col items-center gap-2 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-blue-600 transition text-center"><span class="w-10 h-10 rounded-lg bg-brand-green-50 flex items-center justify-center font-bold text-brand-green-600">Tf</span><span class="text-sm font-medium text-slate-700">Terraform</span></div>
+            <div class="card-lift flex flex-col items-center gap-2 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-blue-600 transition text-center"><span class="w-10 h-10 rounded-lg bg-brand-blue-50 flex items-center justify-center font-bold text-brand-blue-600">Gh</span><span class="text-sm font-medium text-slate-700">GitHub Actions</span></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-12 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="reveal rounded-3xl bg-gradient-to-r from-brand-blue-600 to-brand-green-600 text-white p-10 md:p-14 text-center">
+          <h2 class="text-2xl md:text-3xl font-bold">Don't see your stack? We adapt.</h2>
+          <p class="mt-3 text-white/90 max-w-xl mx-auto">We evaluate the best tools for your specific requirements — not the other way around.</p>
+          <a href="contact.html" class="mt-8 inline-flex items-center gap-2 bg-white text-brand-blue-900 font-semibold px-7 py-3 rounded-xl hover:bg-slate-100 transition">Talk to an engineer</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-blue-900 text-blue-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid md:grid-cols-4 gap-10">
+      <div>
+        <img src="assets/img/logo-secondary.svg" alt="RayCres Technologies" width="180" height="40" class="h-9 w-auto mb-4" />
+        <p class="text-sm text-blue-100/80 mb-5">Building innovative digital solutions — AI, web, mobile, and cloud, delivered with craft.</p>
+        <div class="flex gap-3">
+          <a href="#" aria-label="LinkedIn" class="w-9 h-9 rounded-lg bg-white/10 hover:bg-brand-blue-600 flex items-center justify-center transition"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.5c0-1.3-.02-3-1.83-3-1.83 0-2.11 1.43-2.11 2.9V21H9z"/></svg></a>
+          <a href="#" aria-label="Twitter" class="w-9 h-9 rounded-lg bg-white/10 hover:bg-brand-blue-600 flex items-center justify-center transition"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 5.8c-.7.3-1.5.5-2.4.6.9-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1A4.1 4.1 0 0 0 12 9.1c0 .3 0 .6.1.9A11.7 11.7 0 0 1 3.4 5.5a4.1 4.1 0 0 0 1.3 5.5c-.7 0-1.3-.2-1.9-.5v.1a4.1 4.1 0 0 0 3.3 4 4.2 4.2 0 0 1-1.9.1 4.1 4.1 0 0 0 3.8 2.8A8.3 8.3 0 0 1 2 19.2 11.7 11.7 0 0 0 8.3 21c7.5 0 11.6-6.2 11.6-11.6v-.5A8.3 8.3 0 0 0 22 5.8z"/></svg></a>
+          <a href="https://wa.me/918113804245" aria-label="WhatsApp" class="w-9 h-9 rounded-lg bg-white/10 hover:bg-[#25D366] flex items-center justify-center transition"><svg width="16" height="16" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.837.74 5.491 2.031 7.797L0 32l8.438-2.212A15.927 15.927 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.195 22.865c-.344.969-1.719 1.781-2.813 2.016-.75.156-1.719.281-5-1.078-4.203-1.734-6.906-6-7.109-6.281-.203-.281-1.672-2.234-1.672-4.266 0-2.031 1.063-3.031 1.438-3.438.375-.406.813-.5 1.078-.5.266 0 .531 0 .766.016.25.016.578-.094.906.688.344.797 1.156 2.828 1.266 3.031.109.203.172.438.031.703-.141.266-.219.438-.438.672-.219.234-.453.516-.656.703-.219.203-.453.422-.203.828.25.406 1.109 1.828 2.375 2.953 1.641 1.469 3.016 1.922 3.438 2.141.422.219.672.188.922-.109.25-.297 1.063-1.234 1.344-1.656.281-.422.563-.344.938-.203.375.141 2.375 1.125 2.781 1.328.406.203.672.313.781.484.109.172.109.984-.234 1.953z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="index.html" class="hover:text-white">Home</a></li>
+          <li><a href="solutions.html" class="hover:text-white">Solutions</a></li>
+          <li><a href="technologies.html" class="hover:text-white">Technologies</a></li>
+          <li><a href="about.html" class="hover:text-white">About Us</a></li>
+          <li><a href="careers.html" class="hover:text-white">Careers</a></li>
+          <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-4">Services</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="index.html#services" class="hover:text-white">AI Solutions</a></li>
+          <li><a href="index.html#services" class="hover:text-white">Web Development</a></li>
+          <li><a href="index.html#services" class="hover:text-white">Mobile Development</a></li>
+          <li><a href="index.html#services" class="hover:text-white">SaaS Development</a></li>
+          <li><a href="index.html#services" class="hover:text-white">DevOps Support</a></li>
+          <li><a href="index.html#services" class="hover:text-white">UI/UX Design</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-4">Contact Information</h4>
+        <ul class="space-y-3 text-sm">
+          <li class="flex items-start gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="mt-0.5 flex-shrink-0 text-brand-green-600" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:sivapriya4570@gmail.com" class="hover:text-white">sivapriya4570@gmail.com</a></li>
+          <li class="flex items-start gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="mt-0.5 flex-shrink-0 text-brand-green-600" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.11 12 19.79 19.79 0 0 1 1 3.18 2 2 0 0 1 3 1h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+918113804245" class="hover:text-white">+91 81138 04245</a></li>
+          <li class="flex items-start gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="mt-0.5 flex-shrink-0 text-brand-green-600" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>123 Tech Park, MG Road,<br/>Bengaluru, KA 560001, India</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 text-sm text-blue-100/70 flex flex-col md:flex-row justify-between gap-2">
+        <p>&copy; <span data-year>2026</span> RayCres Technologies Pvt Ltd. All rights reserved.</p>
+        <p>Crafted with care in Bengaluru, India.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/918113804245?text=Hi%2C%20I'm%20interested%20in%20your%20services." target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.837.74 5.491 2.031 7.797L0 32l8.438-2.212A15.927 15.927 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.195 22.865c-.344.969-1.719 1.781-2.813 2.016-.75.156-1.719.281-5-1.078-4.203-1.734-6.906-6-7.109-6.281-.203-.281-1.672-2.234-1.672-4.266 0-2.031 1.063-3.031 1.438-3.438.375-.406.813-.5 1.078-.5.266 0 .531 0 .766.016.25.016.578-.094.906.688.344.797 1.156 2.828 1.266 3.031.109.203.172.438.031.703-.141.266-.219.438-.438.672-.219.234-.453.516-.656.703-.219.203-.453.422-.203.828.25.406 1.109 1.828 2.375 2.953 1.641 1.469 3.016 1.922 3.438 2.141.422.219.672.188.922-.109.25-.297 1.063-1.234 1.344-1.656.281-.422.563-.344.938-.203.375.141 2.375 1.125 2.781 1.328.406.203.672.313.781.484.109.172.109.984-.234 1.953z"/></svg>
+  </a>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
